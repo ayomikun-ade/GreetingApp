@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <title>Greeting App</title>
+  </head>
 
-</head>
+  <body>
+    <main
+      class="w-full h-screen bg-indigo-400 flex items-center justify-center dark:bg-indigo-600 dark:text-white"
+    >
+      <section
+        class="bg-white p-8 rounded-xl shadow-lg mx-2 dark:bg-neutral-800"
+      >
+        <button
+          id="themeToggler"
+          class="h-10 px-3 absolute right-10 top-10 bg-black text-white font-medium dark:bg-white dark:text-black rounded-full"
+        >
+          Dark Mode
+        </button>
+        <h1 class="text-3xl mb-1 font-semibold text-center">
+          Personal Greeting App
+        </h1>
+        <p id="greeting" class="mb-4 text-center dark:text-neutral-300">
+          Tell me your name and I'll make sure to remember it.
+        </p>
 
-<body>
-    <main class="w-full h-screen bg-indigo-400 flex items-center justify-center dark:bg-indigo-600 dark:text-white">
-        <section class=" bg-white p-8 rounded-xl shadow-lg mx-2 dark:bg-neutral-800">
-            <button id="themeToggler" class=" h-10 px-2 absolute right-10 top-10 bg-black text-white font-medium dark:bg-white dark:text-black rounded-full">Dark Mode</button>
-            <h1 class="text-3xl mb-1 font-semibold text-center">Personal Greeting App</h1>
-            <p id="greeting" class="mb-4 text-center dark:text-neutral-300">Tell me your name and I'll make sure to remember it.</p>
+        <form action="" id="form">
+          <input
+            type="text"
+            id="name"
+            required
+            placeholder="Enter your name:"
+            class="mb-4 rounded-full w-full px-3 py-3 border-2 border-black focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 dark:border-neutral-800"
+          />
 
-            <form action="" id="form">
-                <input type="text" id="name" required placeholder="Enter your name:" class="mb-4 rounded-full w-full px-3 py-3 border-2 border-black focus:outline-none focus:border-indigo-600 dark:focus:border-indigo-400 dark:border-neutral-800">
+          <section class="flex justify-center">
+            <button
+              id="submit"
+              type="submit"
+              class="px-8 py-2 mt-3 text-lg bg-green-700 mb-2 rounded-full text-white hover:bg-green-800"
+            >
+              Submit
+            </button>
+          </section>
+        </form>
 
-                <section class="flex justify-end">
-                    <button id="submit" type="submit" class="px-8 py-2 mr-5 text-lg bg-green-700 mb-2 rounded-full text-white hover:bg-green-800">Submit</button>
-                </section>
-            </form>
-
-            <section class="">
-                <button id="clear" class="bg-red-600 px-4 py-[.35rem] rounded-full text-white hover:bg-red-700">Clear Name</button>
-            </section>
-
+        <section class="flex justify-center">
+          <button
+            id="clear"
+            class="text-red-600 font-medium underline hover:text-red-700"
+          >
+            Clear Name
+          </button>
         </section>
+      </section>
     </main>
     <script src="./src/script.js"></script>
-</body>
+  </body>
 </html>
